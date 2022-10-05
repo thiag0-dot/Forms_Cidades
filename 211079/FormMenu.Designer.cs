@@ -51,12 +51,14 @@
             this.cadatrosToolStripMenuItem.Name = "cadatrosToolStripMenuItem";
             this.cadatrosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadatrosToolStripMenuItem.Text = "Cadatros";
+           
             // 
             // cidadesToolStripMenuItem
             // 
             this.cidadesToolStripMenuItem.Name = "cidadesToolStripMenuItem";
             this.cidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cidadesToolStripMenuItem.Text = "Cidades";
+            this.cidadesToolStripMenuItem.Click += new System.EventHandler(this.cidadesToolStripMenuItem_Click);
             // 
             // FormMenu
             // 

@@ -16,5 +16,10 @@ namespace _211079.Views
         {
             InitializeComponent();
         }
+
+        private void btn_fechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

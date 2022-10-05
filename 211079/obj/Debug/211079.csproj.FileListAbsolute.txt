@@ -33,3 +33,4 @@ D:\thiago\211079\211079\obj\Debug\211079.csproj.CoreCompileInputs.cache
 D:\thiago\211079\211079\obj\Debug\211079.csproj.CopyComplete
 D:\thiago\211079\211079\obj\Debug\211079.exe
 D:\thiago\211079\211079\obj\Debug\211079.pdb
+D:\thiago\211079\211079\obj\Debug\_211079.Views.FormCidades.resources
