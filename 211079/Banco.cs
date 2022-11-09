@@ -32,7 +32,7 @@ namespace _211079
             }
             catch(Exception e) 
             {
-                MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(e.StackTrace, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -45,7 +45,7 @@ namespace _211079
             }
             catch(Exception e)
             {
-                MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(e.StackTrace, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -63,11 +63,16 @@ namespace _211079
                                            "uf CHAR(2))", Conexao);
                 Comando.ExecuteNonQuery();
 
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Marcas" +
+                                           "(id INTEGER AUTO_INCREMENT PRIMARY KEY," +
+                                           "nome VARCHAR(40))", Conexao);
+                Comando.ExecuteNonQuery();
+
                 FecharConexao();
             }
             catch(Exception e)
             {
-                MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(e.StackTrace, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

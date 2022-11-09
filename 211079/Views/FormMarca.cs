@@ -11,61 +11,69 @@ using _211079.Models;
 
 namespace _211079.Views
 {
-    public partial class FormCidades : Form
+    public partial class FormMarca : Form
     {
-        Cidade c;
-        public FormCidades()
+        Marca m;
+        public FormMarca()
         {
             InitializeComponent();
         }
 
         void limpaControles()
         {
-            txtid.Clear();
             txtNome.Clear();
-            txtUF.Clear();
             txtPesquisa.Clear();
         }
 
         void carregarGrid(string pesquisa)
         {
-            c = new Cidade()
+            m = new Marca()
             {
                 Nome = pesquisa
             };
-            dgv_cidades.DataSource = c.Consultar();
+            dgv_marcas.DataSource = m.Consultar();
         }
 
-        private void FormCidades_Load(object sender, EventArgs e)
+        private void btn_iniciar_Click(object sender, EventArgs e)
+        {
+            if (txtNome.Text == String.Empty) return;
+            m = new Marca()
+            {
+                Nome = txtNome.Text,
+            };
+            m.Incluir();
+
+            limpaControles();
+            carregarGrid("");
+        }
+
+        private void FormMarca_Load(object sender, EventArgs e)
         {
             limpaControles();
             carregarGrid("");
         }
+
         private void btn_fechar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-
-        private void dgv_cidades_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgv_marcas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dgv_cidades.RowCount > 0)
+            if (dgv_marcas.RowCount > 0)
             {
-                txtid.Text = dgv_cidades.CurrentRow.Cells["id"].Value.ToString();
-                txtNome.Text = dgv_cidades.CurrentRow.Cells["nome"].Value.ToString();
-                txtUF.Text = dgv_cidades.CurrentRow.Cells["uf"].Value.ToString();
+                txtNome.Text = dgv_marcas.CurrentRow.Cells["nome"].Value.ToString();
             }
         }
 
-        private void btn_iniciar_Click_1(object sender, EventArgs e)
+        private void btn_alterar_Click(object sender, EventArgs e)
         {
             if (txtNome.Text == String.Empty) return;
-            c = new Cidade()
+            m = new Marca()
             {
                 Nome = txtNome.Text,
-                Uf = txtUF.Text
             };
-            c.Incluir();
+            m.Alterar();
 
             limpaControles();
             carregarGrid("");

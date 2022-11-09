@@ -30,5 +30,11 @@ namespace _211079
             form.Show();
             
         }
+
+        private void marcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMarca form = new FormMarca();
+            form.Show();
+        }
     }
 }

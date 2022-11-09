@@ -1,6 +1,6 @@
 ﻿namespace _211079.Views
 {
-    partial class FormCidades
+    partial class FormMarca
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtUF = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgv_cidades = new System.Windows.Forms.DataGridView();
+            this.dgv_marcas = new System.Windows.Forms.DataGridView();
             this.btn_pesquisar = new System.Windows.Forms.Button();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,86 +38,33 @@
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_alterar = new System.Windows.Forms.Button();
             this.btn_iniciar = new System.Windows.Forms.Button();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_cidades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_marcas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Código:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Cidade:";
-            // 
-            // txtid
-            // 
-            this.txtid.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtid.Location = new System.Drawing.Point(81, 9);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(82, 20);
-            this.txtid.TabIndex = 2;
-            // 
-            // txtNome
-            // 
-            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNome.Location = new System.Drawing.Point(16, 72);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtNome.Size = new System.Drawing.Size(408, 20);
-            this.txtNome.TabIndex = 3;
-            // 
-            // txtUF
-            // 
-            this.txtUF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUF.Location = new System.Drawing.Point(445, 72);
-            this.txtUF.Name = "txtUF";
-            this.txtUF.Size = new System.Drawing.Size(122, 20);
-            this.txtUF.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(441, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "UF:";
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox1.Controls.Add(this.dgv_cidades);
+            this.groupBox1.Controls.Add(this.dgv_marcas);
             this.groupBox1.Controls.Add(this.btn_pesquisar);
             this.groupBox1.Controls.Add(this.txtPesquisa);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(16, 215);
+            this.groupBox1.Location = new System.Drawing.Point(55, 172);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(694, 273);
-            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             // 
-            // dgv_cidades
+            // dgv_marcas
             // 
-            this.dgv_cidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_cidades.Location = new System.Drawing.Point(10, 99);
-            this.dgv_cidades.Name = "dgv_cidades";
-            this.dgv_cidades.Size = new System.Drawing.Size(658, 151);
-            this.dgv_cidades.TabIndex = 14;
+            this.dgv_marcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_marcas.Location = new System.Drawing.Point(10, 99);
+            this.dgv_marcas.Name = "dgv_marcas";
+            this.dgv_marcas.Size = new System.Drawing.Size(658, 151);
+            this.dgv_marcas.TabIndex = 14;
+            this.dgv_marcas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_marcas_CellContentClick);
             // 
             // btn_pesquisar
             // 
@@ -167,10 +108,10 @@
             this.btn_excluir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_excluir.FlatAppearance.BorderSize = 0;
             this.btn_excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_excluir.Location = new System.Drawing.Point(409, 129);
+            this.btn_excluir.Location = new System.Drawing.Point(448, 86);
             this.btn_excluir.Name = "btn_excluir";
             this.btn_excluir.Size = new System.Drawing.Size(122, 54);
-            this.btn_excluir.TabIndex = 10;
+            this.btn_excluir.TabIndex = 20;
             this.btn_excluir.UseVisualStyleBackColor = true;
             // 
             // btn_fechar
@@ -180,10 +121,10 @@
             this.btn_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_fechar.FlatAppearance.BorderSize = 0;
             this.btn_fechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_fechar.Location = new System.Drawing.Point(577, 129);
+            this.btn_fechar.Location = new System.Drawing.Point(616, 86);
             this.btn_fechar.Name = "btn_fechar";
             this.btn_fechar.Size = new System.Drawing.Size(122, 54);
-            this.btn_fechar.TabIndex = 9;
+            this.btn_fechar.TabIndex = 19;
             this.btn_fechar.UseVisualStyleBackColor = true;
             this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
             // 
@@ -194,10 +135,10 @@
             this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cancelar.FlatAppearance.BorderSize = 0;
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancelar.Location = new System.Drawing.Point(272, 129);
+            this.btn_cancelar.Location = new System.Drawing.Point(311, 86);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(122, 54);
-            this.btn_cancelar.TabIndex = 8;
+            this.btn_cancelar.TabIndex = 18;
             this.btn_cancelar.UseVisualStyleBackColor = true;
             // 
             // btn_alterar
@@ -207,11 +148,12 @@
             this.btn_alterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_alterar.FlatAppearance.BorderSize = 0;
             this.btn_alterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_alterar.Location = new System.Drawing.Point(144, 129);
+            this.btn_alterar.Location = new System.Drawing.Point(183, 86);
             this.btn_alterar.Name = "btn_alterar";
             this.btn_alterar.Size = new System.Drawing.Size(122, 54);
-            this.btn_alterar.TabIndex = 7;
+            this.btn_alterar.TabIndex = 17;
             this.btn_alterar.UseVisualStyleBackColor = true;
+            this.btn_alterar.Click += new System.EventHandler(this.btn_alterar_Click);
             // 
             // btn_iniciar
             // 
@@ -221,40 +163,52 @@
             this.btn_iniciar.FlatAppearance.BorderSize = 0;
             this.btn_iniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_iniciar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_iniciar.Location = new System.Drawing.Point(16, 129);
+            this.btn_iniciar.Location = new System.Drawing.Point(55, 86);
             this.btn_iniciar.Name = "btn_iniciar";
             this.btn_iniciar.Size = new System.Drawing.Size(122, 54);
-            this.btn_iniciar.TabIndex = 6;
+            this.btn_iniciar.TabIndex = 16;
             this.btn_iniciar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_iniciar.UseVisualStyleBackColor = true;
-            this.btn_iniciar.Click += new System.EventHandler(this.btn_iniciar_Click_1);
+            this.btn_iniciar.Click += new System.EventHandler(this.btn_iniciar_Click);
             // 
-            // FormCidades
+            // txtNome
+            // 
+            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNome.Location = new System.Drawing.Point(65, 32);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtNome.Size = new System.Drawing.Size(408, 20);
+            this.txtNome.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(61, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Marcas:";
+            // 
+            // FormMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(753, 554);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_excluir);
             this.Controls.Add(this.btn_fechar);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_alterar);
             this.Controls.Add(this.btn_iniciar);
-            this.Controls.Add(this.txtUF);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtid);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Name = "FormCidades";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Cidades";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Name = "FormMarca";
+            this.Text = "FormMarca";
+            this.Load += new System.EventHandler(this.FormMarca_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_cidades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_marcas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,21 +216,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtUF;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_iniciar;
-        private System.Windows.Forms.Button btn_alterar;
-        private System.Windows.Forms.Button btn_cancelar;
-        private System.Windows.Forms.Button btn_fechar;
-        private System.Windows.Forms.Button btn_excluir;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dgv_marcas;
         private System.Windows.Forms.Button btn_pesquisar;
         private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dgv_cidades;
+        private System.Windows.Forms.Button btn_excluir;
+        private System.Windows.Forms.Button btn_fechar;
+        private System.Windows.Forms.Button btn_cancelar;
+        private System.Windows.Forms.Button btn_alterar;
+        private System.Windows.Forms.Button btn_iniciar;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label label2;
     }
 }
