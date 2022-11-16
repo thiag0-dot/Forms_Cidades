@@ -68,15 +68,58 @@ namespace _211079.Views
 
         private void btn_alterar_Click(object sender, EventArgs e)
         {
-            if (txtNome.Text == String.Empty) return;
-            m = new Marca()
-            {
-                Nome = txtNome.Text,
-            };
-            m.Alterar();
+            string a;
+            a = dgv_marcas.CurrentRow.Cells[0].Value.ToString();
 
+            if (a == "") return;
+
+            if (MessageBox.Show("Deseja alterar o cadastro?", "alterar", MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                m = new Marca()
+                {
+                    Id = int.Parse(a),
+                    Nome = txtNome.Text
+                };
+
+                m.Alterar();
+
+                limpaControles();
+                carregarGrid("");
+            }
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
             limpaControles();
             carregarGrid("");
+        }
+
+        private void btn_excluir_Click(object sender, EventArgs e)
+        {
+            string a;
+            a = dgv_marcas.CurrentRow.Cells[0].Value.ToString();
+
+            if (a == "") return;
+
+            if (MessageBox.Show("Deseja excluir o cadastro?", "Exclusão", MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                m = new Marca()
+                {
+                    Id = int.Parse(a)
+                };
+
+                m.Excluir();
+
+                limpaControles();
+                carregarGrid("");
+            }
+        }
+
+        private void btn_pesquisar_Click(object sender, EventArgs e)
+        {
+            carregarGrid(txtPesquisa.Text);
         }
     }
 }

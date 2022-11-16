@@ -81,6 +81,7 @@
             this.btn_pesquisar.Size = new System.Drawing.Size(96, 58);
             this.btn_pesquisar.TabIndex = 12;
             this.btn_pesquisar.UseVisualStyleBackColor = false;
+            this.btn_pesquisar.Click += new System.EventHandler(this.btn_pesquisar_Click);
             // 
             // txtPesquisa
             // 
@@ -113,6 +114,7 @@
             this.btn_excluir.Size = new System.Drawing.Size(122, 54);
             this.btn_excluir.TabIndex = 20;
             this.btn_excluir.UseVisualStyleBackColor = true;
+            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
             // 
             // btn_fechar
             // 
@@ -140,6 +142,7 @@
             this.btn_cancelar.Size = new System.Drawing.Size(122, 54);
             this.btn_cancelar.TabIndex = 18;
             this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_alterar
             // 
@@ -195,6 +198,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_excluir);
             this.Controls.Add(this.btn_fechar);

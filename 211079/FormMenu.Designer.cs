@@ -32,6 +32,8 @@
             this.cadatrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +51,9 @@
             // 
             this.cadatrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cidadesToolStripMenuItem,
-            this.marcaToolStripMenuItem});
+            this.marcaToolStripMenuItem,
+            this.categoriaToolStripMenuItem,
+            this.clientesToolStripMenuItem});
             this.cadatrosToolStripMenuItem.Name = "cadatrosToolStripMenuItem";
             this.cadatrosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadatrosToolStripMenuItem.Text = "Cadatros";
@@ -67,6 +71,18 @@
             this.marcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.marcaToolStripMenuItem.Text = "Marcas";
             this.marcaToolStripMenuItem.Click += new System.EventHandler(this.marcaToolStripMenuItem_Click);
+            // 
+            // categoriaToolStripMenuItem
+            // 
+            this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.categoriaToolStripMenuItem.Text = "Categoria";
+            // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // FormMenu
             // 
@@ -92,6 +108,8 @@
         private System.Windows.Forms.ToolStripMenuItem cadatrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cidadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoriaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
     }
 }
 

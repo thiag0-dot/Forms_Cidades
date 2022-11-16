@@ -21,7 +21,6 @@ namespace _211079.Views
 
         void limpaControles()
         {
-            txtid.Clear();
             txtNome.Clear();
             txtUF.Clear();
             txtPesquisa.Clear();
@@ -51,7 +50,6 @@ namespace _211079.Views
         {
             if(dgv_cidades.RowCount > 0)
             {
-                txtid.Text = dgv_cidades.CurrentRow.Cells["id"].Value.ToString();
                 txtNome.Text = dgv_cidades.CurrentRow.Cells["nome"].Value.ToString();
                 txtUF.Text = dgv_cidades.CurrentRow.Cells["uf"].Value.ToString();
             }
@@ -67,6 +65,64 @@ namespace _211079.Views
             };
             c.Incluir();
 
+            limpaControles();
+            carregarGrid("");
+        }
+
+        private void btn_alterar_Click(object sender, EventArgs e)
+        {
+            string a;
+            a = dgv_cidades.CurrentRow.Cells[0].Value.ToString();
+
+            if (a == "") return;
+
+            if (MessageBox.Show("Deseja alterar o cadastro?", "alterar", MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                c = new Cidade()
+                {
+                    Id = int.Parse(a),
+                    Nome = txtNome.Text,
+                    Uf = txtUF.Text
+                };
+
+                c.Alterar();
+
+                limpaControles();
+                carregarGrid("");
+            }
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            limpaControles();
+            carregarGrid("");
+        }
+
+        private void btn_excluir_Click(object sender, EventArgs e)
+        {
+            string a;
+            a = dgv_cidades.CurrentRow.Cells[0].Value.ToString();
+
+            if (a == "") return;
+
+            if (MessageBox.Show("Deseja excluir o cadastro?", "Exclusão", MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                c = new Cidade()
+                {
+                    Id = int.Parse(a)
+                };
+
+                c.Excluir();
+
+                limpaControles();
+                carregarGrid("");
+            }
+        }
+
+        private void FormCidades_Load_1(object sender, EventArgs e)
+        {
             limpaControles();
             carregarGrid("");
         }
