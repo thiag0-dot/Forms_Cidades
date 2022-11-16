@@ -97,6 +97,7 @@
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Cidade.cs" />
+    <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Marca.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,6 +106,12 @@
     </Compile>
     <Compile Include="Views\FormCidades.Designer.cs">
       <DependentUpon>FormCidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormMarca.cs">
       <SubType>Form</SubType>
@@ -127,6 +134,9 @@
     </Compile>
     <EmbeddedResource Include="Views\FormCidades.resx">
       <DependentUpon>FormCidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormMarca.resx">
       <DependentUpon>FormMarca.cs</DependentUpon>
