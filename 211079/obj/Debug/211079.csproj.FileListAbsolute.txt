@@ -110,3 +110,4 @@ C:\Users\Usuario\Source\Repos\Forms_Cidades\211079\obj\Debug\211079.exe
 C:\Users\Usuario\Source\Repos\Forms_Cidades\211079\obj\Debug\211079.pdb
 C:\Users\Usuario\Source\Repos\Forms_Cidades\211079\obj\Debug\_211079.Views.FormClientes.resources
 C:\Users\Usuario\Source\Repos\Forms_Cidades\211079\obj\Debug\_211079.Views.FormCategoria.resources
+C:\Users\Usuario\Source\Repos\Forms_Cidades\211079\obj\Debug\_211079.Views.FormProduto.resources

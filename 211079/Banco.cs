@@ -87,6 +87,18 @@ namespace _211079
                                           " PRIMARY KEY (id));", Conexao);
                 Comando.ExecuteNonQuery();
 
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Produto(" +
+                                          "id int auto_increment, " +
+                                          "descricao varchar(100), " +
+                                          "id_categoria int, " +
+                                          "id_marca int, " +
+                                          "estoque int," +
+                                          "foto varchar(100)," +
+                                          "valor decimal(10, 2),"
+                                           + "primary key(id)); ", Conexao);
+
+                Comando.ExecuteNonQuery();
+
                 FecharConexao();
             }
             catch(Exception e)
