@@ -42,5 +42,11 @@ namespace _211079
             FormClientes form = new FormClientes();
             form.Show();
         }
+
+        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCategoria form = new FormCategoria();
+            form.Show();
+        }
     }
 }

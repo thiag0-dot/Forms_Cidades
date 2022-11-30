@@ -126,5 +126,10 @@ namespace _211079.Views
             limpaControles();
             carregarGrid("");
         }
+
+        private void dgv_cidades_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
